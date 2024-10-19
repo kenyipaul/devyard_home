@@ -1,9 +1,13 @@
+@font-face {
+  font-family: poppins;
+  src: url(./fonts/Poppins-Regular.ttf);
+}
 * {
   margin: 0;
   padding: 0;
   scrollbar-width: none;
   box-sizing: border-box;
-  font-family: roboto, sans-serif;
+  font-family: poppins, sans-serif;
 }
 
 body {
@@ -11,11 +15,13 @@ body {
   overflow: hidden;
   min-height: 900px;
   display: flex;
+  background: #F4F7FA;
   flex-direction: column;
 }
 
 .navbar {
   padding: 1rem;
+  background: #fff;
   box-shadow: 0 10px 20px #00000020;
 }
 .navbar nav {
@@ -47,7 +53,8 @@ body {
 .navbar nav section:nth-child(2) .buttons button {
   border: none;
   cursor: pointer;
-  padding: .5rem 1rem;
+  border-radius: 5rem;
+  padding: .6rem 1.3rem;
 }
 .navbar nav section:nth-child(2) .buttons button:nth-child(1) {
   background: transparent;
@@ -63,10 +70,10 @@ body {
 }
 
 .blog-post-container {
+  gap: 1rem;
   margin: auto;
   display: grid;
   padding: 1rem;
-  gap: 2rem 1rem;
   max-width: 1280px;
   overflow-y: scroll;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -75,9 +82,16 @@ body {
   place-content: start;
 }
 
+.post {
+  padding: 1rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: .3rem .3rem 10px #00000010;
+}
 .post .banner {
   aspect-ratio: 16/9;
-  background: #ddd;
+  background: #F4F7FA;
+  border-radius: 1rem;
 }
 .post .content {
   gap: .5rem;
@@ -100,7 +114,10 @@ body {
 .post .profile {
   gap: .7rem;
   display: flex;
+  padding-top: 1rem;
+  margin-top: .5rem;
   align-items: center;
+  border-top: 1px solid #00000010;
 }
 .post .profile .cover {
   width: 45px;
